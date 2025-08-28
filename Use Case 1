@@ -1,13 +1,3 @@
-# UC-01.04: De-register Organisation / Deactivate User
-
-
-sequenceDiagram
-    participant OrgAdmin as Organisation Admin
-    participant FMAR_UI as FMAR API/UI
-    participant ARM as Asset Registration Module
-    participant PSQM as Qualification Module
-    participant SPUM as SPUM Module
-    participant FMARAdmin as FMAR Administrator
 
     OrgAdmin->>FMAR_UI: Step 1 - Initiate de-registration request
     FMAR_UI->>ARM: Step 2 - Check for active assets

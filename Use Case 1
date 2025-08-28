@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant OrgAdmin as Organisation Admin
+    participant FMAR_UI as FMAR API/UI
+    participant ARM as Asset Registration Module
+    participant PSQM as Qualification Module
+    participant SPUM as SPUM Module
+    participant FMARAdmin as FMAR Administrator
+
+    OrgAdmin->>FMAR_UI: Step 1 - Initiate de-registration request
+    FMAR_UI->>ARM: Step 2 - Check for active assets
+    FMAR_UI->>PSQM: Step 3 - Check for qualified market units
+    ARM-->>FMAR_UI: Step 4 - Return asset status
+    PSQM-->>FMAR_UI: Step 5 - Return qualification status
+    FMAR_UI->>SPUM: Step 6 - Proceed with deactivation
+    SPUM-->>FMAR_UI: Step 7 - Mark organisation and users inactive
+    FMAR_UI-->>FMARAdmin: Step 8 - Log audit record

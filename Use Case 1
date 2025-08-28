@@ -1,3 +1,6 @@
+# UC-01.04: De-register Organisation / Deactivate User
+
+
 sequenceDiagram
     participant OrgAdmin as Organisation Admin
     participant FMAR_UI as FMAR API/UI
